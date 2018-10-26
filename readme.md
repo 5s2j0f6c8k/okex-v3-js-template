@@ -20,4 +20,36 @@ restWalletApi.getCurrencies().then(function (res) {
         loggger.debug(json)
     })
 })
+
+let restSpotApi = new okex.RestSpotApi("https://www.okex.com", "", "", "")
+
+restSpotApi.getAccounts().then(function (res) {
+    res.json().then(function (json) {
+        loggger.debug(json)
+    })
+})
+
+let restMarginApi = new okex.RestMarginApi("https://www.okex.com", "", "", "")
+
+restMarginApi.getMarginAccounts().then(function (res) {
+    res.json().then(function (json) {
+        loggger.debug(json)
+    })
+})
+
+let restFuturesApi = new okex.RestFuturesApi("https://www.okex.com", "", "", "")
+
+restFuturesApi.getFuturesPosition().then(function (res) {
+    res.json().then(function (json) {
+        loggger.debug(json)
+    })
+})
+
+let restEttApi = new okex.RestEttApi("https://www.okex.com", "", "", "")
+
+restEttApi.getEttAccounts().then(function (res) {
+    res.json().then(function (json) {
+        loggger.debug(json)
+    })
+})
 ```
